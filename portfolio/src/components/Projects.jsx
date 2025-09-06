@@ -1,4 +1,7 @@
 import React from 'react';
+import megablog from '../assets/megablog.png'
+import dashboard from '../assets/dashboard.png'
+import movie from '../assets/movie.png'
 
 const Projects = () => {
   const projects = [
@@ -6,16 +9,28 @@ const Projects = () => {
       title: 'Personal Productive Dashboard',
       description: 'It is a minimalist web app that helps you stay focused, organized, and motivated.It combines essential tools like a task list, Pomodoro timer, weather updates, and motivational quotes — all in one place.',
       tags: ['Java Script'],
+      image: dashboard, 
+      liveDemo: 'https://personalproductivitydashboard.netlify.app/',
+      github: 'https://github.com/PranjaliSehrawat15',
+
     },
     {
       title: 'Episode 11',
       description: 'Episode_11 is a sleek movie discovery platform built with React. It lets users search and browse films via the TMDB API, watch trailers, manage personalized watchlists, and filter by genres. ',
-      tags: ['JavaScript', 'API'],
+      tags: ['React', 'API'],
+      image: movie, 
+      liveDemo: 'https://movie-app-episode11.netlify.app/',
+      github: 'https://github.com/PranjaliSehrawat15',
+
     },
     {
       title: 'Mega Blog App',
       description: 'Mega Blog App is a modern blogging platform with user authentication, rich-text editing, and full post management. Built with React and Appwrite, it offers a clean UI for creating, editing, and deleting blog posts.',
       tags: ['React', 'Appwrite'],
+      image: megablog, 
+      liveDemo: 'https://mega-blog-phi-sandy.vercel.app/',
+      github: 'https://github.com/PranjaliSehrawat15',
+
     },
   ];
 
@@ -32,15 +47,18 @@ const Projects = () => {
               key={index} 
               className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 transition-transform"
             >
-              <div className="h-48 bg-gradient-to-r from-purple-500 to-purple-700 relative">
-                <div className="absolute top-4 right-4 flex gap-2">
-                  {project.tags.map((tag, i) => (
-                    <span 
-                      key={i} 
-                      className="px-3 py-1 bg-white dark:bg-gray-900 text-purple-600 dark:text-purple-400 text-sm font-medium rounded-full"
-                    >
-                      {tag}
-                    </span>
+              <div
+      className="h-48 relative bg-cover bg-center"
+      style={{ backgroundImage: `url(${project.image})` }}
+    >
+      <div className="absolute top-4 right-4 flex gap-2">
+        {project.tags.map((tag, i) => (
+          <span 
+            key={i} 
+            className="px-3 py-1 bg-white dark:bg-gray-900 text-purple-600 dark:text-purple-400 text-sm font-medium rounded-full"
+          >
+            {tag}
+          </span>
                   ))}
                 </div>
               </div>
@@ -49,13 +67,17 @@ const Projects = () => {
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                 <div className="flex gap-4">
                   <a 
-                    href="#" 
+                     href={project.liveDemo} 
+                     target="_blank"
+                     rel="noopener noreferrer"
                     className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
                   >
                     Live Demo
                   </a>
                   <a 
-                    href="#" 
+                    href={project.github} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-purple-600 dark:text-purple-400 font-medium hover:underline"
                   >
                     GitHub

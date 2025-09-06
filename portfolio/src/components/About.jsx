@@ -65,7 +65,7 @@ const About = () => {
              alt="Icon" 
              className="w-8 h-8"
               />              </div>
-              <div className="text-5xl text-white">👩‍💻</div>
+              <div className="text-8xl text-white">👩‍💻</div>
             </div>
           </div>
         </div>

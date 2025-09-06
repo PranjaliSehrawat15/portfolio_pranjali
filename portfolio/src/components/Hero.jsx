@@ -9,7 +9,7 @@ const Hero = () => {
             Hi, I'm <span className="text-purple-600 dark:text-purple-400">Pranjali Sehrawat</span>
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-6 animate-fade-in-up delay-100">
-            Web Developer & CS Student
+            Web Developer & CSE Student
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 animate-fade-in-up delay-200">
             A passionate second-year B.Tech CSE student specializing in creating interactive, 
